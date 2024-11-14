@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-content{
+    overflow-x: hidden;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    margin: 0;
+    background-color: #F6F0EB;
+    font-family: 'Poppins' , sans-serif;
+    scroll-behavior: smooth;
+    
+}
+
+header{
+    background-color: #f5e3d3e7;
+    position: sticky;
+    top: 0;
+    padding: 24px ;
+    backdrop-filter: blur(5px);
+}
+
+
+.header-content{
+    max-width: 1290px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+nav{
+    display: flex;
+    /* min-width: 1290px; */
+    /* gap: 55px; */
+}
+
+a {
+    text-decoration-line: none;/*the line at the last defines the specficness of the decoration type so that the other decoration parts of the css element remains the same */
+    color: inherit;
+}
+
+nav a {
+    font-weight: 700;
+    font-size: 20px;
+    color: #492118;
+    /* margin-left: 60px; /*this will ad the 60px margin left in all the nav links including the first one*/
+}
+
+
+nav a + a{
+    margin-left: 60px;/*when we write like this a + a this will not add the margin 60px in the first element rest after first element all other will get the 60px */
+}
+
+
+.logo {
+    width: 47px;
+}
+
+
+.logo img {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+main{
+    padding: 0 25px;
+    /* display: flex; */
+    
+}
+
+.img-container{
+    max-width: 1290px;
+    margin: 0 auto;
+}
+
+.hero-section{
+    margin-top: 100px;
+}
+
+.hero-section p{
+    color: #492118;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.section{
+    margin-top: 120px;
+}
+
+.section .img-container {
+    max-width: 980px;
+
+}
+
+section h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #492118;
+    margin-bottom: 10px;
+}
+
+.section h2{
+    font-size: 48px;
+    font-weight: 700;
+    color: #492118;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* .go-top{ */
+    /* text-align: right; */
+    /* max-width: 960px; */
+    /* margin: 0 auto; */
+    /* font-weight: 700; */
+    /* font-size: 32px; */
+    /* margin-top: 88px; */
+
+
+/* } */
+
+/* .go-top a { */
+    /* text-decoration-line: underline; */
+
+/* } */
+
+#top{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 3.15rem;
+    height: 3.15rem;
+    background-color: rgb(236, 109, 109);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25 );
+    color: white;
+    cursor: pointer;  
+    border: none;
+    outline: none;
+    border-radius: 50%;
+}
+
+#top:active{
+    background-color:red ;
+}
+
+
+.footer-text{
+    margin-top: 64px;
+    color: #858585;
+    font-size: 24px;
+    text-align: center;
+}
+
+.close{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-icon{
+    font-size: 25px;
+    position: absolute;
+    bottom: 28px;
+    left: 34px;
+    
+}
+
+.hamburger-icon:hover{
+    cursor: pointer;
+}
+
+.hamburger-menu{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: -124px;
+    right: -128px;
+    background-color: aliceblue;
+    position: absolute;
+    left: 0;
+}
+.hamburger-menu-container{
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    display: none;
+}
+
+@media (max-width:1200px) {
+    nav a {
+        font-size: 16px;
+    }
+
+    nav a + a {
+        margin-left: 48px;
+    }
+    header{
+        padding: 16px 24px;
+    }
+}
+
+
+@media(max-width:960px){
+    nav a {
+        font-size: 12px;
+    }
+
+    nav a + a{
+        margin-left: 32px;
+    }
+
+    .hero-section{
+        margin-top: 40px;
+    }
+    .section{
+        margin-top: 42px;
+    }
+    .hero-section p {
+        font-size: 17px;
+    }
+
+    .section h2 {
+        font-size: 27px;
+    }
+
+    section h2 {
+    text-align: center;
+    font-size: 27px;
+    font-weight: 700;
+    color: #492118;
+    margin-bottom: 10px;
+    }
+}
+
+@media(max-width:768px){
+    header{
+        background-color: #f1e7dee3;
+        backdrop-filter: blur(4px);
+        position: sticky;
+        top: 0;
+        
+    }
+    .header-content{
+        min-height: 70px;
+        
+    }
+   
+
+    nav {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.846);
+        flex-direction: column;
+        right: -200px;
+        top: 16px;
+        padding: 24px;
+        /* display: none; */
+        /* height: 210px; */
+        transition: right 0.28s ease-in-out;
+    }
+
+    
+
+    nav a + a {
+        margin: 0;
+        margin-top: 16px;
+    }
+
+    .close,.hamburger-menu-container{
+        display: block;
+    }
+    
+    .menu-open nav {
+        /* display: flex; */
+        right: 7px;
+    }
+    .menu-open .hamburger-menu-container {
+        display: none;
+    }
+
+
+
+    .footer-text{
+        font-size: 18px;
+        margin-top: 32px;
+
+    }
+}
+
+
+
+
+
+
