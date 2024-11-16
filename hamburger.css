@@ -28,7 +28,7 @@ header{
     position: sticky;
     top: 0;
     padding: 24px ;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(3px);
 }
 
 
@@ -140,19 +140,38 @@ section h2 {
 
 /* } */
 
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
 #top{
     position: fixed;
-    right: 10px;
-    bottom: 10px;
+    right: 20px;
+    bottom: 20px;
+    font-size: 26px;
     width: 3.15rem;
     height: 3.15rem;
     background-color: rgb(236, 109, 109);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25 );
     color: white;
     cursor: pointer;  
-    border: none;
+    border: 3px solid #793829;
     outline: none;
     border-radius: 50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+}
+
+#top:hover,#top:focus{
+    background-color: #793829;
+    border: 3px solid rgb(236, 109, 109);
 }
 
 #top:active{
